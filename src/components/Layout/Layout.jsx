@@ -1,8 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Navbar from "../Navbar/Navbar";
 
 function Layout(props) {
-  return <div>Layout</div>;
+  return (
+    <div>
+      <Navbar />
+      <Footer />
+    </div>
+  );
 }
 
 Layout.propTypes = {};
