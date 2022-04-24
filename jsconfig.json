@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "module": "commonjs",
+    "target": "ES6",
+    "paths": {
+      "src/*": ["./src/*"],
+      "components/*": ["./components/*"],
+      "pages/*": ["./pages/*"]
+    }
+  },
+  "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"],
+  "exclude": ["node_modules", "**/node_modules", "dist"]
+}

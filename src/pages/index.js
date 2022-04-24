@@ -1,5 +1,4 @@
 import * as React from "react";
-import Layout from "../components/Layout/Layout";
 
 // styles
 const pageStyles = {
