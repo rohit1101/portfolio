@@ -8,10 +8,9 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'pages',
-        path: './src/images/'
-      },
-      __key: 'pages'
+        name: 'blog',
+        path: `${__dirname}/blog`
+      }
     },
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',

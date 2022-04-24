@@ -20,8 +20,9 @@ function Layout({ children }) {
   return (
     <div>
       <title>{data.site.siteMetadata.title}</title>
+      <h1>Weelcome to {data.site.siteMetadata.title}</h1>
       <Navbar />
-      <h3>Website name: {}</h3>
+      {children}
       <StaticImage
         alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
         src="../../images/icon.png"
@@ -30,7 +31,6 @@ function Layout({ children }) {
         alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
         src="https://pbs.twimg.com/media/E1oMV3QVgAIr1NT?format=jpg&name=large"
       />
-      {children}
       <Footer />
     </div>
   );
