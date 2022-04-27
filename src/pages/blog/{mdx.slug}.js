@@ -1,15 +1,32 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Layout from '../../components/Layout/Layout'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Layout from '../../components/Layout/Layout';
+import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-function BlogPost(props) {
+function BlogPost({ data }) {
+  console.log(data);
   return (
     <Layout>
-        <h1>Blogs coming soon...</h1>
+      <p>{data.mdx.frontmatter.date}</p>
+      <MDXRenderer>{data.mdx.body}</MDXRenderer>
     </Layout>
-  )
+  );
 }
 
-BlogPost.propTypes = {}
+BlogPost.propTypes = {};
 
-export default BlogPost
+export const query = graphql`
+  query ($id: String) {
+    mdx(id: { eq: $id }) {
+      frontmatter {
+        title
+        date(formatString: "YYYY-MM-DD")
+      }
+      slug
+      body
+    }
+  }
+`;
+
+export default BlogPost;
