@@ -8,6 +8,7 @@ function BlogPost({ data }) {
   console.log(data);
   return (
     <Layout>
+      <h2>{data.mdx.frontmatter.title}</h2>
       <p>{data.mdx.frontmatter.date}</p>
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
     </Layout>
