@@ -1,14 +1,24 @@
 module.exports = {
   siteMetadata: {
-    title: `portfolio`,
+    title: `Rohit's portfolio`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-mdx", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+  plugins: [
+    'gatsby-plugin-mdx',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'blog',
+        path: `${__dirname}/blog`
+      }
     },
-    __key: "pages"
-  }]
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: true
+      }
+    }
+  ]
 };
