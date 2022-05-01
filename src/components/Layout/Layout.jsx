@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
   }
   body {
-  min-height: 100%;
+  height: 100%;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: 'Cardo', serif;
@@ -38,6 +38,7 @@ img, picture, video, canvas, svg {
 const Wrapper = styled.div`
   background-color: ${(props) => (props.isFooter ? `hsl(44, 92%, 71%)` : `hsl(150, 50%, 90%)`)};
   margin-top: ${(props) => props.isFooter && 'auto'};
+  height: 100%;
 `;
 
 // `hsl(200, 39%, 11%)`
@@ -49,7 +50,7 @@ const Container = styled.div`
 `;
 
 const BodyWrapper = styled.div`
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 `;
