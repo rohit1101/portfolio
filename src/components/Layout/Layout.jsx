@@ -41,8 +41,6 @@ const Wrapper = styled.div`
   height: 100%;
 `;
 
-// `hsl(200, 39%, 11%)`
-
 const Container = styled.div`
   max-width: 70%;
   margin-inline: auto;
@@ -73,7 +71,7 @@ function Layout({ children }) {
       <title>{data.site.siteMetadata.title}</title>
 
       <Navbar>
-        <h1>Welcome to {data.site.siteMetadata.title}</h1>
+        <h1>{data.site.siteMetadata.title}</h1>
       </Navbar>
 
       <Wrapper>
