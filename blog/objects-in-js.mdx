@@ -1,0 +1,87 @@
+---
+title: 'Fundamentals of Objects in JavaScript'
+date: '2021-07-23'
+---
+
+# Fundamentals of Objects in JS
+
+`Object` is a non-primitive data type in JavaScript which consists of `key-value` pairs. Objects are mutable in nature, we will discuss about this in a minute.
+**Every time we use `{}` (open and close curly braces) syntax we create a brand new object**, let us look at the proof of this statement in the following image.
+
+![SCR-20221020-nuk.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1666328951280/u2kzPV69J.png align="left")
+
+## Keys
+
+The keys of the object are of `String` type and case sensitive for example:
+
+```js
+let person = {
+  age: 27,
+  Age: 200
+};
+```
+
+In the `person` object both the keys are valid and JavaScript does not throw an error.
+
+## Values
+
+The value of the keys in an object can be of any data type.
+
+```js
+let objectWithUniqueType = {
+  string: 'string',
+  number: 'number',
+  boolean: true,
+  weirdOne: null,
+  lessWeirdOne: undefined,
+  functionType: function () {
+    return 'hello world!';
+  },
+  object: {
+    name: 'I am an object'
+  },
+  arrays: [1, 2, 3, 4, 5],
+  rarelyUsed: Symbol('I am a Symbol')
+};
+```
+
+## Accessing object values
+
+#### We can access the objects values in the following ways:
+
+Let us access values from avenger object.
+
+```javascript
+const avenger = {
+  name: 'Thor',
+  ability: 'Thor can use lighting :zap:️ to save people from danger',
+  location: 'Unknown',
+  famousDialouge: function () {
+    return 'Bring me Thanos!!:zap:️:zap:️:zap:️:zap:️:zap:️';
+  }
+};
+```
+
+The format we follow for accessing object values is `objectName.key` assuming there is a valid key, if the key we are trying to access is no defined in an object then we would get the value `undefined`
+
+```js
+console.log(avenger.name);
+// "Thor"
+console.log(avenger.sibilings);
+// undefined
+```
+
+We can use `objectName["key"]` syntax for getting values from an object as shown in the code snippet below.
+
+```js
+console.log(avenger['name']);
+// "Thor"
+console.log(avenger['sibilings']);
+// undefined
+```
+
+In this blog we have covered the basics of objects in JS, in the following blogs posts we will look into the nuances of objects and how we as developers can leverage the features of objects while building applications.
+
+Thank you for spending your valuable time by reading the above content and feel free to comment if the quality of the content can be improved.
+
+Always be happy see you soon!
