@@ -1,11 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Layout from '../../components/Layout/Layout';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 function BlogPost({ data }) {
-  console.log(data);
   return (
     <Layout>
       <h2>{data.mdx.frontmatter.title}</h2>
